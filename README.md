@@ -1,4 +1,4 @@
-# PyTorch Project Template
+# PyTorch Project Template (gonna use this for our project)
 
 Implement your PyTorch projects the smart way.
 
