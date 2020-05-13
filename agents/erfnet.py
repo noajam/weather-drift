@@ -175,7 +175,7 @@ class ERFNetAgent(BaseAgent):
 
         for x, y in tqdm_batch:
             if self.cuda:
-                x, y = x.pin_memory().cuda(async=self.config.async_loading), y.cuda(async=self.config.async_loading)
+                x, y = x.pin_memory().cuda(), y.cuda()
             x, y = Variable(x), Variable(y)
             # model
             pred = self.model(x)
@@ -222,7 +222,7 @@ class ERFNetAgent(BaseAgent):
 
         for x, y in tqdm_batch:
             if self.cuda:
-                x, y = x.pin_memory().cuda(async=self.config.async_loading), y.cuda(async=self.config.async_loading)
+                x, y = x.pin_memory().cuda(), y.cuda()
             x, y = Variable(x), Variable(y)
             # model
             pred = self.model(x)

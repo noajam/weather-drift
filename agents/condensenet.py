@@ -148,7 +148,7 @@ class CondenseNetAgent(BaseAgent):
         current_batch = 0
         for x, y in tqdm_batch:
             if self.cuda:
-                x, y = x.cuda(async=self.config.async_loading), y.cuda(async=self.config.async_loading)
+                x, y = x.cuda(), y.cuda()
 
             # current iteration over total iterations
             progress = float(self.current_epoch * self.data_loader.train_iterations + current_batch) / (
@@ -201,7 +201,7 @@ class CondenseNetAgent(BaseAgent):
 
         for x, y in tqdm_batch:
             if self.cuda:
-                x, y = x.cuda(async=self.config.async_loading), y.cuda(async=self.config.async_loading)
+                x, y = x.cuda(), y.cuda()
 
             x, y = Variable(x), Variable(y)
             # model

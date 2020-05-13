@@ -80,10 +80,10 @@ def process_config(json_file):
         exit(-1)
 
     # create some important directories to be used for that experiment.
-    config.summary_dir = os.path.join("experiments", config.exp_name, "summaries/")
-    config.checkpoint_dir = os.path.join("experiments", config.exp_name, "checkpoints/")
-    config.out_dir = os.path.join("experiments", config.exp_name, "out/")
-    config.log_dir = os.path.join("experiments", config.exp_name, "logs/")
+    config.summary_dir = os.path.join("experiments", config.exp_name, "summaries\\")
+    config.checkpoint_dir = os.path.join("experiments", config.exp_name, "checkpoints\\")
+    config.out_dir = os.path.join("experiments", config.exp_name, "out\\")
+    config.log_dir = os.path.join("experiments", config.exp_name, "logs\\")
     create_dirs([config.summary_dir, config.checkpoint_dir, config.out_dir, config.log_dir])
 
     # setup logging in the project

@@ -159,9 +159,9 @@ class DCGANAgent(BaseAgent):
             fake_noise = torch.randn(x.size(0), self.config.g_input_size, 1, 1)
 
             if self.cuda:
-                x = x.cuda(async=self.config.async_loading)
-                y = y.cuda(async=self.config.async_loading)
-                fake_noise = fake_noise.cuda(async=self.config.async_loading)
+                x = x.cuda()
+                y = y.cuda()
+                fake_noise = fake_noise.cuda()
 
             x = Variable(x)
             y = Variable(y)
