@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 Main Agent for WNet
 """
